@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+    <constant name="struts.action.excludePattern" value="/chatAction" />
+    
+	<package name="default" extends="struts-default">
+		<action name="login" class="cs4230.struts.LoginAction">
+			<result name="success">chat.jsp</result>
+		</action>
+		
+		<action name="sendChat" class="cs4230.struts.SendChatAction">
+			<result name="success">chat.jsp</result>
+		</action>
+	</package>
+</struts>
