@@ -7,14 +7,14 @@
 <!-- START SNIPPET: xworkSample -->
 <struts>
     <constant name="struts.action.excludePattern" value="/chatAction" />
-    
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <constant name="struts.multipart.maxSize" value="10701096"/>
 	<package name="default" extends="struts-default">
 		<action name="login" class="cs4230.struts.LoginAction">
 			<result name="success">chat.jsp</result>
 		</action>
-		
 		<action name="sendChat" class="cs4230.struts.SendChatAction">
 			<result name="success">chat.jsp</result>
-		</action>
+	</action>
 	</package>
 </struts>

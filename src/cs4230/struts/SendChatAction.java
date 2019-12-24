@@ -1,19 +1,21 @@
 package cs4230.struts;
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-public class SendChatAction {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class SendChatAction extends ActionSupport {
 	private String username;
 	private String message;
 	private static List<String> messages = new CopyOnWriteArrayList<String>();
-	
-	public String execute() {
+
+	@Override
+	public String execute() throws Exception {
 		messages.add(username + ": " + message);
-		
 		return "success";
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -33,4 +35,5 @@ public class SendChatAction {
 	public List<String> getMessages() {
 		return messages;
 	}
+
 }

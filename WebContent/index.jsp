@@ -6,6 +6,5 @@
 <title>Struts Chat initial page</title>
 </head>
 <body>
-
 </body>
 </html>
